@@ -10,8 +10,6 @@ MNIST = load_mnist()
 images = MNIST['data'].astype(np.double)
 labels = MNIST['target'].astype(np.int)
 
-# GRADED FUNCTION: DO NOT EDIT THIS LINE
-
 def distance(x0, x1):
     """Compute distance between two vectors x0, x1 using the dot product"""
     return np.sqrt(np.dot(x0-x1, x0-x1))
@@ -23,7 +21,6 @@ def angle(x0, x1):
     return np.arccos(np.dot(x0,x1)/np.sqrt(mx0*mx1))
 
 
-# GRADED FUNCTION: DO NOT EDIT
 def most_similar_image():
     """Find the index of the digit, among all MNIST digits
        that is the second-closest to the first image in the dataset (the first image is closest to itself trivially). 
@@ -34,7 +31,6 @@ def most_similar_image():
     index = np.argmin(result)+1
     return index # 60
 
-# GRADED FUNCTION: DO NOT EDIT
 
 def pairwise_distance_matrix(X, Y):
     """Compute the pairwise distance between rows of X and rows of Y
@@ -53,7 +49,6 @@ def pairwise_distance_matrix(X, Y):
     assert Y.ndim == 2 
     return scipy.spatial.distance_matrix(X, Y)
 
-# GRADED FUNCTION: DO NOT EDIT THIS LINE
 
 def KNN(k, X, y, x):
     """K nearest neighbors
